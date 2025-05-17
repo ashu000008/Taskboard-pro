@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import NotificationList from '../components/notifications/NotificationList';
 import BadgeSummary from '../components/badges/BadgeSummary';
 import BadgeList from '../components/badges/BadgeList';
 import './UserProfile.css';
 
 function UserProfile() {
   const { currentUser } = useAuth();
-  const [activeTab, setActiveTab] = useState('notifications');
+  const [activeTab, setActiveTab] = useState('badges');
 
   return (
     <div className="user-profile-container">
@@ -35,12 +34,6 @@ function UserProfile() {
       {/* Tab Navigation */}
       <div className="profile-tabs">
         <button
-          className={`tab-btn ${activeTab === 'notifications' ? 'active' : ''}`}
-          onClick={() => setActiveTab('notifications')}
-        >
-          Notifications
-        </button>
-        <button
           className={`tab-btn ${activeTab === 'badges' ? 'active' : ''}`}
           onClick={() => setActiveTab('badges')}
         >
@@ -56,7 +49,6 @@ function UserProfile() {
 
       {/* Tab Content */}
       <div className="profile-content">
-        {activeTab === 'notifications' && <NotificationList />}
         {activeTab === 'badges' && <BadgeSummary />}
         {activeTab === 'badgeHistory' && <BadgeList />}
       </div>
