@@ -10,6 +10,7 @@ import {
 } from '@mui/icons-material';
 import './Dashboard.css';
 
+
 function Dashboard() {
   const { currentUser } = useAuth();
   const [profile, setProfile] = useState(null);
@@ -32,7 +33,7 @@ function Dashboard() {
           getUserStats()
         ]);
         
-        console.log('Dashboard data:', { profileData, statsData });
+        console.log('Fetched stats data:', statsData);
         
         setProfile(profileData);
         setStats(statsData);
@@ -43,9 +44,10 @@ function Dashboard() {
         setLoading(false);
       }
     };
-  
+
     fetchDashboardData();
   }, []);
+
 
   
   if (loading) return <div className="loading">Loading dashboard...</div>;

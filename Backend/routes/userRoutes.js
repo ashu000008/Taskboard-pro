@@ -2,9 +2,11 @@ import express from 'express';
 import User from '../models/userModel.js';
 import Task from '../models/taskModel.js';
 import Badge from '../models/badgeModel.js';
+import Project from '../models/projectModel.js';
 import { authenticateToken } from '../middleware/auth.js';
 
 const router = express.Router();
+
 
 // Create or update user
 router.post('/', authenticateToken, async (req, res) => {
@@ -47,7 +49,8 @@ router.get('/me', authenticateToken, async (req, res) => {
 });
 
 // Get user statistics
-router.get('/me/stats', authenticateToken, async (req, res) => {
+router.get('/stats', authenticateToken, async (req, res) => {
+  console.log('GET /me/stats called'); // <--- Add this line
   try {
     const { uid } = req.user;
     
@@ -80,7 +83,10 @@ router.get('/me/stats', authenticateToken, async (req, res) => {
     res.status(500).json({ message: 'Error fetching user statistics', error: error.message });
   }
 });
+
+
 router.get('/me/stats', authenticateToken, async (req, res) => {
+  console.log("hit")
   try {
     const { uid } = req.user;
     
@@ -89,7 +95,7 @@ router.get('/me/stats', authenticateToken, async (req, res) => {
       'assignee.userId': uid
     });
 
-    // Count tasks
+    // Get tasks counts
     const totalTasks = tasks.length;
     const tasksCompleted = tasks.filter(task => task.status === 'Done').length;
 
@@ -98,7 +104,7 @@ router.get('/me/stats', authenticateToken, async (req, res) => {
       'members.userId': uid
     });
 
-    // Count unique team members
+    // Get team members count
     const teamMembers = new Set();
     projects.forEach(project => {
       project.members.forEach(member => {
@@ -106,6 +112,13 @@ router.get('/me/stats', authenticateToken, async (req, res) => {
           teamMembers.add(member.userId);
         }
       });
+    });
+
+    console.log('Sending stats:', {
+      tasksCompleted,
+      totalTasks,
+      projectsCount: projects.length,
+      teamMembersCount: teamMembers.size
     });
 
     res.status(200).json({
