@@ -229,6 +229,7 @@ function NewTaskModal({ project, onClose, onTaskCreated }) {
                 id="dueDate"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
+                min={new Date().toISOString().split('T')[0]}
               />
             </div>
           </div>

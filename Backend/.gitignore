@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 package-lock.json
+serviceAccountKey.json
+
 
 # Editor directories and files
 .vscode/*
