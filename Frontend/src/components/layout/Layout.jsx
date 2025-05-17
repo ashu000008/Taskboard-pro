@@ -57,7 +57,7 @@ const Layout = ({ children }) => {
               onClick={handleAvatarClick}
               title="Go to Profile"
             >
-              U
+              A
             </div>
           </div>
         </header>
