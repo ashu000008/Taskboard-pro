@@ -71,27 +71,35 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 20px;
+  padding: 4px 16px;      /* Reduced vertical and horizontal padding */
   background-color: #ecf0f1;
   border-bottom: 1px solid #bdc3c7;
+  min-height: 36px;       /* Make the navbar thinner */
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;              /* Slightly reduced gap */
+}
+
+.notification-btn,
+.profile-btn {
+  padding: 4px 8px;       /* Smaller button padding */
+  font-size: 1rem;        /* Slightly smaller icon/button size */
 }
 
 .user-avatar {
   width: 35px;
   height: 35px;
   background-color: #34495e;
-  color: #ecf0f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
   border-radius: 50%;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* Make the initial smaller */
+  font-weight: 600;
 }
 
 /* Page Content */
@@ -169,13 +177,18 @@
   width: 35px;
   height: 35px;
   background-color: #34495e;
-  color: #ecf0f1;
+  color: #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
-  overflow: hidden;
+  font-size: 0.85rem !important; /* Force smaller font size */
+  font-weight: 600;
+  line-height: 1;
+}
+
+.user-avatar span {
+  font-size: 0.85rem !important;
 }
 
 .avatar-image {
