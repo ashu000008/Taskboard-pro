@@ -80,5 +80,44 @@ router.get('/me/stats', authenticateToken, async (req, res) => {
     res.status(500).json({ message: 'Error fetching user statistics', error: error.message });
   }
 });
+router.get('/me/stats', authenticateToken, async (req, res) => {
+  try {
+    const { uid } = req.user;
+    
+    // Get all tasks for the user
+    const tasks = await Task.find({
+      'assignee.userId': uid
+    });
 
+    // Count tasks
+    const totalTasks = tasks.length;
+    const tasksCompleted = tasks.filter(task => task.status === 'Done').length;
+
+    // Get user's projects
+    const projects = await Project.find({
+      'members.userId': uid
+    });
+
+    // Count unique team members
+    const teamMembers = new Set();
+    projects.forEach(project => {
+      project.members.forEach(member => {
+        if (member.userId !== uid) {
+          teamMembers.add(member.userId);
+        }
+      });
+    });
+
+    res.status(200).json({
+      tasksCompleted,
+      totalTasks,
+      projectsCount: projects.length,
+      teamMembersCount: teamMembers.size,
+      progressPercentage: totalTasks ? Math.round((tasksCompleted / totalTasks) * 100) : 0
+    });
+  } catch (error) {
+    console.error('Error fetching stats:', error);
+    res.status(500).json({ message: 'Error calculating statistics' });
+  }
+});
 export default router;

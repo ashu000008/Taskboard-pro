@@ -37,7 +37,19 @@ export const getUserStats = async () => {
       `${API_URL}/users/me/stats`,
       getAuthConfig()
     );
-    return response.data;
+    
+    console.log('Received stats:', response.data);
+    
+    // Ensure we have all required fields with fallbacks
+    const stats = response.data || {};
+    
+    return {
+      tasksCompleted: parseInt(stats.tasksCompleted) || 0,
+      totalTasks: parseInt(stats.totalTasks) || 0,
+      projectsCount: parseInt(stats.projectsCount) || 0,
+      teamMembersCount: parseInt(stats.teamMembersCount) || 0,
+      progressPercentage: parseInt(stats.progressPercentage) || 0
+    };
   } catch (error) {
     console.error('Error fetching user stats:', error);
     throw error;
