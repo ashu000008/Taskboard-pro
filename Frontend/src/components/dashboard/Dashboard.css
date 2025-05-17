@@ -1,0 +1,79 @@
+.assigned-tasks {
+  margin-bottom: 30px;
+}
+
+.tasks-table {
+  overflow-x: auto;
+}
+
+.tasks-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tasks-table th {
+  font-weight: 500;
+  color: #64748b;
+  background-color: #f8fafc;
+}
+
+.tasks-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.tasks-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.task-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.task-link:hover {
+  text-decoration: underline;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-badge.to-do {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.status-badge.in-progress {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.status-badge.done {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.due-date {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.due-date.overdue {
+  color: #ef4444;
+  font-weight: 500;
+}

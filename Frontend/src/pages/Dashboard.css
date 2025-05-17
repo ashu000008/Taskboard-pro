@@ -1,0 +1,102 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Welcome Section */
+  .welcome-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .welcome-section h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #34495e;
+  }
+  
+  .welcome-section p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+  }
+  
+  /* Statistics Section */
+  .stats-section {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .stat-card {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .stat-card p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+  }
+  
+  /* Task Overview Section */
+  .task-overview {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-overview h2 {
+    margin: 0 0 15px;
+    color: #34495e;
+  }
+  
+  .task-overview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-overview li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .task-overview li:last-child {
+    border-bottom: none;
+  }
+  
+  .task-overview .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+  
+  .status.completed {
+    background-color: #2ecc71;
+    color: #ffffff;
+  }
+  
+  .status.pending {
+    background-color: #e74c3c;
+    color: #ffffff;
+  }
+  
+  .status.in-progress {
+    background-color: #f1c40f;
+    color: #ffffff;
+  }

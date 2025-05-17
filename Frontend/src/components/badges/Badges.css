@@ -1,0 +1,162 @@
+.badges-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.badges-header {
+  margin-bottom: 20px;
+}
+
+.empty-badges {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 1px dashed #cbd5e1;
+}
+
+.empty-badges p {
+  margin: 0 0 8px 0;
+  color: #64748b;
+}
+
+.empty-badges p:last-child {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.empty-badges .hint {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.badge-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.badge-item:hover {
+  transform: translateY(-3px);
+}
+
+.badge-icon {
+  font-size: 2rem;
+  margin-right: 16px;
+}
+
+.badge-details {
+  flex: 1;
+}
+
+.badge-details h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.badge-details p {
+  margin: 0 0 8px 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.badge-date {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.badges-summary {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badges-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.total-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f0f9ff;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.total-badge-icon {
+  font-size: 1.5rem;
+}
+
+.total-badge-count {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0369a1;
+}
+
+.total-badge-label {
+  color: #0369a1;
+  font-size: 0.85rem;
+}
+
+.badge-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.badge-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #0ea5e9;
+}
+
+.badge-icon-large {
+  font-size: 2.5rem;
+  margin-right: 16px;
+}
+
+.badge-info {
+  flex: 1;
+}
+
+.badge-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.badge-info p {
+  margin: 0 0 8px 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.badge-count {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.badge-count strong {
+  color: #0369a1;
+}

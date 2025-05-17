@@ -1,0 +1,45 @@
+/* Features Section */
+.features-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .features-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1e293b;
+  }
+  
+  .feature-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Add spacing between cards */
+    margin-top: 20px; /* Add spacing above the cards */
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2563eb; /* Vibrant blue for feature titles */
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #64748b; /* Neutral gray for descriptions */
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }

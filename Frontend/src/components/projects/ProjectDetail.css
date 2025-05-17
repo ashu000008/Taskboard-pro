@@ -1,0 +1,126 @@
+/* Project Detail Container */
+.project-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Section */
+.project-detail-header {
+  margin-bottom: 24px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.project-description {
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #fecaca;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tab-btn.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.tab-btn:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.05);
+}
+
+/* Tab Content */
+.tab-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 1.25rem;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+}
