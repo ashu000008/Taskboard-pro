@@ -2,7 +2,8 @@
 
 A modern project management and collaboration platform designed to help teams organize, track, and manage their tasks efficiently with real-time updates and workflow automation.
 
-![image](https://github.com/user-attachments/assets/ae051b0b-d2f6-4366-ba0f-8ee84dbbd8bc)
+
+<img width="1470" alt="Screenshot 2025-05-17 at 11 20 08 AM" src="https://github.com/user-attachments/assets/34e2cb9d-60c2-42ee-859f-3ccf4a13ae0f" />
 
 
 ---
